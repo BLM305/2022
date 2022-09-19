@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>xxx </title>
+
+  <style> /* CSS comment */
+    body { max-width: 440px; }
+    input { width: 50px }
+    .out {
+        font-size: 18px;
+        background: blue;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+  </style>
+</head>
+
+<body>   <!-- HTML comment: Modify all items marked xxx -->
+
+<h2>This text is not shown. Why?</h2>
+xxx 
+<input type=number value=0 onChange="out.innerText=value">
+&emsp;
+<button onClick="increment()">xxx</button>
+<p class=out>0</p>
+
+<hr />
+<b>Sample code</b>
+<pre>This text is not shown. Why?</pre>
+
+<hr />
+<p>Ref: <a href="https://www.w3schools.com/js/" 
+   target="NewTab">JS Tutorial</a>
+</p>
+
+<script>
+"use strict";
+// JavaScript comment
+function increment() {
+    let c = Number(out.innerText)+1
+    console.log("counter = "+c)
+    out.innerText = c
+}
+document.querySelector('h2').innerText = document.title
+document.querySelector('pre').innerText = increment
+const out = document.querySelector('.out'); increment()
+</script>
+
+</body>
+</html>

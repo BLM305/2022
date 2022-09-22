@@ -5,8 +5,9 @@
 * Read ["Neden JavaScript?"](https://eyler.blogspot.com/2018/06/neden-javascript.html)
 * See the [JS examples](https://maeyler.github.io/JS/)
 * Study the [First example](Counting.html)
-* Read Chap 1-3 in [Eloquent JavaScript](http://eloquentjavascript.net/)
-* No class work this week
+* Chap 1 in [Eloquent JavaScript](http://eloquentjavascript.net/)
+* Video 1 in [VS Code playlist](https://youtube.com/playlist?list=PLj6YeMhvp2S5UgiQnBfvD7XgOMKs3O_G6)
+* Do the class work (on Thursday)
 
 **Attendance and regular class work is required** <br>
 _Derse devam ve düzenli ödev yapmak gerekiyor_
@@ -15,9 +16,16 @@ _Derse devam ve düzenli ödev yapmak gerekiyor_
 <style>
   body { 
     max-width: 600px; 
-    background: wheat;
+    background: #cef;
   }
   #navbar {
     margin-left: 0;
   }
 </style>
+<script>
+  onload = () => {
+    let f = document.querySelector('div.footer')
+    if (!f) return
+    f.remove(); console.log('remove footer')
+  }
+</script>

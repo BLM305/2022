@@ -4,15 +4,9 @@
 
 [Examples](https://maeyler.github.io/JS/): sample JavaScript pages
 
-[Eloquent JavaScript](http://eloquentjavascript.net/): our textbook
+[Eloquent JavaScript](https://eloquentjavascript.net/): our textbook
 
-[Outline](Course_outline.html): weekly planning of the course
-
-Tools: 
-* Browser: Chrome/Edge/Brave/Opera
-* Editor: [VS Code](https://code.visualstudio.com/download) download
-* Version control: [git](https://git-scm.com/downloads) download
-* Repository: [GitHub](https://github.com/) sign in
+[Outline](https://blm305.github.io/2022/Course_outline.html): weekly planning
 
 Lab instructors:
 * Kadir Aram: <karam(AT)fsm.edu.tr>

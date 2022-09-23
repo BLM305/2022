@@ -3,6 +3,7 @@
 * Glance at our [Repository](https://github.com/BLM305/2022)
 * See the [Course outline](../Course_outline.html)
 * Read ["Neden JavaScript?"](https://eyler.blogspot.com/2018/06/neden-javascript.html)
+  <br> &emsp; Updated chart is [here](https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/worldwide/#quarterly-200901-202203)
 * See the [JS examples](https://maeyler.github.io/JS/)
 * Study the [First example](Counting.html)
 * Chap 1 in [Eloquent JavaScript](http://eloquentjavascript.net/)

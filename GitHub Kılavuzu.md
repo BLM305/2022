@@ -8,11 +8,11 @@ GitHub kullanmak için üç önemli sebep:
 
 ### Commit, Branch, Pull Request, Merge
 
-Yerel bilgisayarda denemeleri yapıp çalışır duruma getirince `Commit` işlemini yapıyoruz. Dokümanlardaki "Kaydet" gibi bir işlem, tek farkı, bütün ayrıntılar kaydedildiği için eski bir duruma dönmek mümkün. `Commit` işlemlerinin çok sayıda olmasında korkmayın: Her Commit, programın bir tek özelliği üstünde çalışsa iyi olur.
+Yerel bilgisayarda denemeleri yapıp çalışır duruma getirince `Commit` işlemini yapıyoruz. Dokümanlardaki "Kaydet" gibi bir işlem, tek farkı, bütün ayrıntılar kaydedildiği için eski bir duruma dönmek mümkün. `Commit` işlemlerinin çok sayıda olmasında korkmayın: Her Commit, programın bir tek özelliğini değiştirmeli.
 
 * Save: Yerel dosyayı değiştir, repoya dokunma
 * Commit: Dosyaların son halini yerel repoya ekle
-* Push: Yerel reponun son halini nuluta kopyala
+* Push: Yerel reponun son halini buluta kopyala
 
 Yeni bir özellik denemek ya da takım çalışması yapmak için dallanma gerekiyor. Her dalı ayrı bir proje olarak düşünebiliriz. Desktop programında dal değiştirince, klasördeki dosyalar da uygun bir şekilde değişiyor, sadece o dala ait dosyalar görünüyor. Programın ana dalına `main` adı verilmiş. 
 
@@ -32,7 +32,7 @@ Markdown denemeleriniz için VS Code içinde Preview yeterli.
 
 GitHub ile uygun çalışması için şu eklentiler gerekiyor:
 * Git Graph -- Commit'leri görmek ve reset
-* GitHub Pull Requests and Issues -- login, vb
+* GitHub Pull Requests and Issues -- login
 * Live Server -- Uzak bilgiye erişim (fetch)
 
 ![eklentiler](images/extensions.png)
@@ -52,7 +52,7 @@ Git için [kapsamlı bir kitap](https://git-scm.com/book/en/v2) var ama VS Code 
 ### Referanslar
 
 * Pronunciation: [forvo.com/word/github](https://forvo.com/word/github)
-* Docs: [guides.github.com](https://guides.github.com) and [try.github.io](https://try.github.io)
+* Documents: [guides.github.com](https://guides.github.com)
 * [git-version-control-workflow](https://build5nines.com/introduction-to-git-version-control-workflow)
 
 

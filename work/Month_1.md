@@ -8,7 +8,7 @@
 * Chap 4
 * JSON, VS Code
 
-<script src="/2021/navbar.js"></script>
+<script src="/2022/navbar.js"></script>
 <style>
   body { 
     max-width: 600px; 
@@ -18,3 +18,10 @@
     margin-left: 0;
   }
 </style>
+<script>
+  onload = () => {
+    let f = document.querySelector('div.footer')
+    if (!f) return
+    f.remove(); console.log('remove footer')
+  }
+</script>

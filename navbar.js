@@ -19,8 +19,8 @@ const NAV =
     </li>
     <li class=Work>Work
       <div class=menu>
-        <a href="/2022/work/First%20Week">First Week</a>
-        <a href="/2022/work/Month_1">First Month</a>
+        <a href="/2022/work/First%20Week">First week</a>
+        <a href="/2022/work/Class_work">Class work</a>
       </div>
     </li>
 </ul>`

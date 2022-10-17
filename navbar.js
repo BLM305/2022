@@ -43,3 +43,8 @@ function setNavbar() {
   })
 }
 setNavbar()
+onload = () => {
+  let f = document.querySelector('div.footer')
+  if (!f) return
+  f.remove(); console.log('remove footer')
+}

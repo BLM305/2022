@@ -75,10 +75,3 @@ Eski öğrencilerim bu konuda bana öğretmen oldular :)
     margin-left: 0;
   }
 </style>
-<script>
-  onload = () => {
-    let f = document.querySelector('div.footer')
-    if (!f) return
-    f.remove(); console.log('remove footer')
-  }
-</script>

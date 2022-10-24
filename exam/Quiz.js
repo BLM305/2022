@@ -27,41 +27,31 @@ class Book {
 
 class Quiz extends Menu {
   constructor() {
-    super();
-    let a = this.solution(); 
-    this.rumi = a
-    this.mesnevi = a.books[0]
-    this.divan = a.books[1]
-    this.data = a.books.concat(a.books)
+    super(); let d = makeData()
+    this.data = d.reduce((a,b) => a.concat(b.books), [])
+    this.solution = d[3]
   }
-  solution() {
-    let a = new Author("Rumi", 1207)
-    a.addBook(new Book("Mesnevi", 180))
-    a.addBook(new Book("Divan", 350))
-    return a
-  }
-  morePagesThan(num=100) {
-    let s = new Set()
-    for (let b of this.data)
-      if (b.pages > num) s.add(b);
-    return s
+  morePagesThan(num) {
+    return this.data.filter(b => b.pages > num)
   }
   convertToMap() {
     let m = new Map();
     for (let b of this.data) {
       let n = m.get(b.author.name)
       if (!n) { //not found
-        n = new Set()
-        m.set(b.author.name, n)
+        n = []; m.set(b.author.name, n)
       }
-      n.add(b)
+      n.push(b)
     }
     return m
   }
-  report(num=100) {
+  report(num=300) {
     let c = this.data.length
     if (!c) return ""
-    let t = this.rumi+"\n"
+    let t = `
+    let a = new Author("Rumi", 1207)
+    a.addBook(new Book("Mesnevi", 180))
+    a.addBook(new Book("Divan", 350))\n`
     t += "\n• Start with "+c+" books:\n"
     for (let b of this.data) t += b+"\n"
     t += "\n• morePagesThan("+num+"):\n"
@@ -70,7 +60,29 @@ class Quiz extends Menu {
     t += "\n• convertToMap():\n"
     let m = this.convertToMap()
     for (let k of m.keys()) 
-      t += k+" -- "+m.get(k).size+" books\n"
+      t += k+" -- "+m.get(k).length+" books\n"
     return t
   }
+}
+function makeData() {
+  let a = null, d = []
+  a = new Author("Platon", -428)
+  a.addBook(new Book("Devlet Adamı", 320))
+  a.addBook(new Book("Sofist", 160))
+  a.addBook(new Book("Yasalar", 210))
+  d.push(a)
+  a = new Author("Farabi", 872)
+  a.addBook(new Book("İlimlerin Sayımı", 90))
+  a.addBook(new Book("Faziletli Şehir", 180))
+  d.push(a)
+  a = new Author("Gazzali", 1058)
+  a.addBook(new Book("İlimlerin İhyası", 470))
+  a.addBook(new Book("Filozoflar", 380))
+  a.addBook(new Book("Dalaletten", 210))
+  d.push(a)
+  a = new Author("Rumi", 1207)
+  a.addBook(new Book("Mesnevi", 180))
+  a.addBook(new Book("Divan", 350))
+  d.push(a)
+  return d
 }

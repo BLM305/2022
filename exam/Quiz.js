@@ -32,16 +32,15 @@ class Quiz extends Menu {
     this.solution = d[3]
   }
   morePagesThan(num) {
-    return this.data.filter(b => b.pages > num)
+    let a = this.data.filter(b => b.pages > num)
+    return new Set(a)
   }
   convertToMap() {
     let m = new Map();
     for (let b of this.data) {
       let n = m.get(b.author.name)
-      if (!n) { //not found
-        n = []; m.set(b.author.name, n)
-      }
-      n.push(b)
+      if (!n) n = 0
+      m.set(b.author.name, n+1)
     }
     return m
   }
@@ -60,8 +59,9 @@ class Quiz extends Menu {
     t += "\n• convertToMap():\n"
     let m = this.convertToMap()
     for (let k of m.keys()) 
-      t += k+" -- "+m.get(k).length+" books\n"
-    return t
+      t += k+" -- "+m.get(k)+" books\n"
+    if (!window.disp1) return t
+    disp1.innerText = t
   }
 }
 function makeData() {

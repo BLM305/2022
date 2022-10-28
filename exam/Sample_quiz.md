@@ -1,4 +1,9 @@
-﻿
+﻿[Quiz solution 2022](/2022/exam/Quiz1_2022)
+
+## 2021
+
+[Quiz solution 2021](/2021/exam/Quiz1_2021)
+
 ## 2020
 
 ![2020](/2021/exam/Quiz1_2020.jpg)

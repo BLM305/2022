@@ -22,6 +22,7 @@ function fileSelect(t) {
 class Async extends Menu {
   constructor() {
     super(); ASYNC = this;
+    this.window = window;
     this.navigator = navigator;
     this.clipboard = navigator.clipboard;
     this.geolocation = navigator.geolocation;

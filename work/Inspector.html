@@ -48,6 +48,7 @@ class Chap4 extends Menu {
 
 var a, b, c, d, s;  //global variables
 const L=console.log, T=800, D=display;
+const FETCH = "fetch('https://ipinfo.io/json')";
 const TEXT = 
 `const L=console.log, T=800, D=display;
 Callback:
@@ -56,7 +57,7 @@ navigator.geolocation.getCurrentPosition(L)
 Promise:
 navigator.getBattery().then(L)
 navigator.clipboard.readText().catch(L)
-fetch('https://ipinfo.io/json').then(L)`
+`+FETCH+'.then(L)'
 function init() {
     let len = 123, name = "Circle", pi = Math.PI
     a = [0, 11, "22", "abc"]
@@ -70,14 +71,14 @@ function init() {
     display(new Chap4());
     display(new Chap6());
     display(new Quiz());
-    MENU = new Async(); //global
+    MENU = new Async(disp1, disp2); //global
     MENU.displayText(TEXT)
     display(MENU); 
 }
     docName.innerText = "Inspector "+VERSION;
     try {
         inspect(sss, init); //makes the table
-        inp.value = "new Date()";
+        inp.value = FETCH
     } catch(e) {
         reportError(e);
     }

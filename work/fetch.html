@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="https://blm-fsmvu.github.io/305/images/icon192.png">
+    <title>xxx </title>
+
+  <style> /* CSS comment */
+    body { max-width: 440px; }
+    #url { width: 190px; }
+    span, #url { color: blue; }
+  </style>
+</head>
+
+<body>   <!-- HTML comment: Modify all items marked xxx -->
+
+<h2 id=title title="Put your name here"></h2>
+<p title="navigator.platform">
+  Platform: <span id=plat></span>
+</p>
+<p title="Battery level (integer)">
+  Battery level: <span id=lev></span>
+</p>
+<p title="Latitude/Longitude (4 digits)">
+  Location: <span id=loc></span>
+</p>
+<p title="Does the URL exist?">
+  URL <input type=url id=url value="https://maeyler.github.io/"
+      onChange="check()"> <span id=resp></span>
+</p>
+<hr />
+<b>Sample code</b>
+<pre id=sample>This text is not shown. Why?</pre>
+
+<hr />
+
+<script>
+"use strict";
+function init() {
+//complete the code below
+    plat.innerText = 'xxx';
+    navigator.geolocation
+      .getCurrentPosition(p =>
+        loc.innerText = 'xxx'
+      );
+    navigator.getBattery().then(b =>
+        lev.innerText = 'xxx'
+      );
+    check()
+}
+function check() {
+//complete the code below
+    fetch(url.value).then(r => 
+      resp.innerText = r.ok? 'OK' : 'xxx'
+    ).catch(e => 
+      resp.innerText = e
+    )
+}
+    title.innerText = document.title;
+    sample.innerText = init+'\n'+check;
+    init();
+</script>
+
+</body>
+</html>

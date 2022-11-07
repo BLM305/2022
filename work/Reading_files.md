@@ -25,7 +25,7 @@ fetch() ile gelen Response nesnesini kopyalayıp birinin text(), diğerinin json
 
 ### Remote Image
 
-Explained [here](Local_files.md)
+Explained [here](Local_files)
 
 
 <script src="/2022/navbar.js"></script>

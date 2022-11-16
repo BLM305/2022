@@ -12,6 +12,10 @@ Quiz#1 -- [Samples](../exam/Sample_quiz) & [Solution](../exam/Quiz1_2022)
 
 CW#4 -- [Async Programming](./fetch.html)
 
+Quiz#2 -- [Solution](../exam/Quiz2_2022)
+
+CW#5 -- [Event listeners](https://maeyler.github.io/JS/hard/Battery.html)
+
 <script src="/2022/navbar.js"></script>
 <style>
   body { 

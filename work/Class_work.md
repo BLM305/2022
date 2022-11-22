@@ -2,7 +2,7 @@
 
 CW#0 -- [Browser tools](./Counting.html)
 
-CW#1 -- [IBAN verification](https://maeyler.github.io/JS/math/TCKimlik)
+CW#1 -- [IBAN verification](https://maeyler.github.io/JS/math/TCKimlik.html)
 
 CW#2 -- [Text to Objects](./ObjectList.html)
 

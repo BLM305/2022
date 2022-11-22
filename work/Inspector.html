@@ -48,12 +48,13 @@ class Chap4 extends Menu {
 
 var a, b, c, d, s;  //global variables
 const L=console.log, T=800, D=display;
-const FETCH = "fetch('https://ipinfo.io/json')";
+const FETCH = "fetch('https://jsonplaceholder.typicode.com/todos')";
 const TEXT = 
 `const L=console.log, T=800, D=display;
 Callback:
 setTimeout(L, T, 'L is a callback', 'T='+T)
 navigator.geolocation.getCurrentPosition(L)
+
 Promise:
 navigator.getBattery().then(L)
 navigator.clipboard.readText().catch(L)

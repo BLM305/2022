@@ -16,6 +16,15 @@ CW#5 -- [Event listeners](https://maeyler.github.io/JS/hard/Battery.html)
 
 Quiz#2 -- [Solution](../exam/Quiz2_2022)
 
+CW#6 -- [GitHub users API](https://maeyler.github.io/JS/api/GitHub_Users.html)
+
+CW#7 -- [Open Weather API](./Weather.html)
+
+CW#8 -- [Open Maps API](./Open_Maps.html)
+
+CW#9 -- [Image Inspector](./ImageInspector.html) 
+[Pie Chart](https://maeyler.github.io/JS/canvas/Pie%20Chart.html)
+
 <script src="/2022/navbar.js"></script>
 <style>
   body { 

@@ -22,7 +22,7 @@ CW#7 -- [Open Weather API](./Weather.html)
 
 CW#8 -- [Open Maps API](./Open_Maps.html)
 
-CW#9 -- [Image Inspector](./ImageInspector.html) 
+CW#9 -- [Image Inspector](./ImageInspector.html) &
 [Pie Chart](https://maeyler.github.io/JS/canvas/Pie%20Chart.html)
 
 <script src="/2022/navbar.js"></script>

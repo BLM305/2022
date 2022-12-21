@@ -19,7 +19,7 @@ const NAV =
     <li class=Work>Work
       <div class=menu>
         <a href="/2022/work/First%20Week">First week</a>
-        <a href="/2022/work/Class_work">Class work</a>
+        <a href="/2022/work/">Class work</a>
         <a href="https://github.com/BLM305/2022" target=BLM305>Repository</a>
       </div>
     </li>

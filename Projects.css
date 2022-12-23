@@ -1,0 +1,53 @@
+body {
+    font: 15px sans-serif;
+    background: #cef;
+    max-width: 460px;
+    margin: 8px; 
+}
+li {
+    margin: 6px;
+}
+.button {    
+    background: #def;
+    border-radius: 10px; 
+    padding: 8px; 
+}
+.button:hover {
+    background: navy;
+    color: yellow;
+}
+.button:hover a {
+    color: yellow;
+}
+a {
+    position: relative;
+    text-decoration:none;
+}
+a:hover .tip, a:hover img {
+    display: inherit;
+}
+img {
+    background: white;
+    top: -90px;
+}
+.tip {
+    font-size: small;
+    color: navy;
+    background: yellow;
+    top: 22px;
+    left: 55px;
+    text-align: center;
+    padding: 5px 5px;
+    border: 1px solid navy;
+}
+img, .tip {
+    display: none;
+    z-index: 1;
+    width: 120px;
+    position: absolute;
+    box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+}
+p {
+    margin: 2em 0;
+}
+

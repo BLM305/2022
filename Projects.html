@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#cef">
+    <meta name="author" content="M A Eyler, Istanbul, 2022">
+    <meta name="description" content="BLM305 FSMV University">
+    <link rel="icon" href="./images/icon192.png">
+    <link rel="stylesheet" href="Projects.css">
+    <title>BLM 305 Projects</title>
+</head>
+<body>
+  <h2>BLM 305 -- 2022 </h2>
+  <p>Links to the weekly work for each student</p>
+  <ul id=out></ul>
+  
+<script>
+  "use strict";
+  const data = 
+  `ÖMER KEREM	ADALI	https://okadalifsm.github.io/okadali-advprog/
+  AHMAD K	AHMEDOĞLU	https://ahmadkaramahmedoglu1.github.io/ileri-program/
+  MEHMET	AK	https://mehmetak7.github.io/advancedProgramming/
+  RÜYA	ALABED	https://rouaalabed.github.io/AdvancedProgramming/
+  NUR EFŞAN	ALBAŞ	https://efsanalbas.github.io/advancedProgramming/
+  ROUA	ALKADAMANI	https://ralkadamani.github.io/Roua-Alkadamani-BLM/
+  BERAT	ALKIN	https://beratalkin.github.io/Advanced_Programming/
+  ERAY	ALTAŞ	https://erayaltas.github.io/BLM19305E/
+  YUNUS EMRE	ANAÇAL	https://yunusemreanacal.github.io/AdvancedProgrammingTechniques/
+  HÜDAYİ	AŞIK	https://hudayiasik.github.io/AdvancePrograming2023/
+  MERYEM	AYDIN	https://meryemayd.github.io/AdvancedProgramming/
+  RECEP TAHA	AYDIN	https://receptahaydin.github.io/RecepFSMVU/
+  ABDULMELİK	BEKMEZ	https://abdulmelikbekmez.github.io/BLM_305/
+  HATİCE	ÇAĞLAR	https://haticecaglar.github.io/advancedProgrammingTec/
+  MERVE	ÇELİK	https://mervecelik11.github.io/xxx/
+  EMİN YASİR	CORUT	https://eminyasircorut.github.io/eyasircorut.github.io/xxx/
+  DEMET	DEMİR	https://demetdemir0.github.io/BLM305/
+  ALİ	DEREYURT	https://dereyurtali.github.io/BLM305-2022/
+  TALHA M	DEREYURT	https://talhadereyurt.github.io/AdvancedProgrammingTechniques/
+  EBRAR	DERİNDAĞ	https://ebrarderindag.github.io/xxx/
+  MUSTAFA	DEVECİ	https://mustafa-deveci.github.io/AdvancedProgramming-Studies/
+  SÜMEYYE ZÜLAL	DİK	https://szulaldik.github.io/Advance_programming/
+  YUSUF	DUR	https://yusufdur.github.io/advanced-programming-2022/
+  İREM	ERÇEL	https://iremercel.github.io/AdvancedProgrammingTechniqes/
+  BEYZANUR	ERDAĞI	https://beyzanurerdagi.github.io/advanced-programming/
+  FURKAN B	ERGÖÇEN	https://furkanergocen.github.io/Advance-Programming-Languages/
+  ADNAN	FAHED	https://adnanjpg.github.io/advanced-prog-2022/
+  M ALİ	GÜLCEMAL	https://muhammedaligulcemal.github.io/APT/
+  HABİBE	GÜREL	https://habibegurel.github.io/advancedProgrammingTechniques/
+  ALİ	HÜSEYİN	https://alihuseyin1998.github.io/AdvProgTech/
+  RECEP TAYYİP	İLHAN	https://receptayyipilhan.github.io/JavaScript-APIs/
+  SALİHA NUR	İLHAN	https://salihailhan.github.io/JavaScript-APIs/
+  MELİH	KAÇAMAN	https://melihkacaman.github.io/melih_advanced_programming_lab/
+  GONCAGÜL	KARADAĞ	https://goncagulkaradag.github.io/GoncagulKaradag.AdvancedProgramming/
+  RANA S	KAZAN	https://ranasevdenur.github.io/Advanced-Programming-2023/
+  EVREN	KESKİN	https://keskinevren.github.io/advanced-programming/
+  BASHAR	KHOUJAH	https://bashar0101.github.io/bashar_khoujah_APT/
+  NUMAN	KILINÇOĞLU	https://numan-kilincoglu.github.io/Advanced-Programming/
+  ERDİNÇ	KUVVET	https://erdinckuvvet.github.io/advanced-programming-2022/
+  ŞAMİL B	ÖZAYDIN	https://samilozaydin.github.io/Advanced-Programming/
+  MEHMET	ÖZKAN	https://mehmetozkn.github.io/advanced-course/
+  ASİYE İLAYDA	SAĞKOL	https://ilaydasagkol.github.io/APT/
+  BEYZA	ŞAHİNGÖZ	https://beyzasahingoz.github.io/beyza-sahingoz-advance/
+  FURKAN S	SALİHOĞLU		https://xxx
+  İSMAİL SAİD	SARI	https://isaidsari.github.io/advancedpt/
+  YUSUF İHSAN	ŞİMŞEK	https://yusufihsansimsek.github.io/class_repo_advanced/
+  YUNUS	SÜMER	https://yunussmr.github.io/BlmAdvancedPrgrmng/
+  BAHADIR S	TERZİOĞLU	https://bahadirsina.github.io/AdvancedProgramming/
+  FURKAN	ÜLENGİN	https://ulengin.github.io/BLM305_Advance_Programing_FurkanUlengin/
+  İRFAN	VURAL	https://irfan-vural.github.io/AdvanceProgramming/
+  GÜRKAN	YAKAR	https://gurkanyakar.github.io/Advanced-Programming-Techniques/`
+  
+  function toItem(x) {
+      let [n1, n2, p] = x.split('\t')
+      if (!n1) return x
+      return "<a href='"+p+"' target=Project>"+n1+' '+n2+"</a>"
+  }
+  let a = data.split('\n').map(toItem)
+  out.innerHTML = '<li>'+a.join('\n<li>')
+</script>
+
+<!-- <p>
+  <a class="button" href="https://github.com/maeyler/305/" target="NewTab">Repository
+  <img src="./BLM 305 Projects_files/GitHub-Mark-120px-plus.png"></a> 
+  <a class="button" href="https://blm305.github.io/2019/index.html">Course
+  <img src="./BLM 305 Projects_files/icon192.png"></a> 
+  <a class="button" href="https://maeyler.github.io/" target="NewTab">Instructor
+  <img src="./BLM 305 Projects_files/14038292"></a>
+</p> -->
+<p>
+(C) 2022  
+  <a class="button" href="http://mf.fatihsultan.edu.tr/" target=Project>FSM Vakıf Üniversitesi</a>
+</p>
+
+<script>
+"use strict";
+var eltShown = null
+function doTouch1(evt) {
+    if (eltShown) {
+       eltShown.style.display = ""
+       eltShown = null
+    }
+    let t = evt.target, n = t.tagName
+    console.log("StartTouch", n)
+    if (n == "A" && t.childElementCount > 0) {
+        eltShown = t.children[0]
+        eltShown.style.display = "inherit"
+    } else if (n == "IMG" || n == "SPAN") {
+        //evt.preventDefault()
+        t.parentElement.click()
+    }
+}
+function doTouch2(evt) {
+    let t = evt.target, n = t.tagName
+    //console.log("End Touch", n)
+    if (n == "A" && t.childElementCount > 0) {
+    //ignore click on <a> tag with children
+        evt.preventDefault()
+    }
+}
+for (let e of document.querySelectorAll('a')) {
+    // e.ontouchstart = doTouch1; e.ontouchend = doTouch2
+}
+</script>
+
+
+
+</body></html>

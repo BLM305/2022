@@ -11,15 +11,15 @@ const NAV =
     </li>
     <li class=Course>Course
       <div class=menu>
-        <a href="/2022/index.html">Home 🏠</a>
-        <a href="/2022/Course_outline.html">Outline</a>
+        <a href="/2022/">Home 🏠</a>
+        <a href="/2022/Course_outline">Outline</a>
         <a href="https://eloquentjavascript.net/" target=BLM305>Textbook</a>
       </div>
     </li>
     <li class=Work>Work
       <div class=menu>
-        <a href="/2022/work/First%20Week">First week</a>
         <a href="/2022/work/">Class work</a>
+        <a href="/2022/Projects">Term project</a>
         <a href="https://github.com/BLM305/2022" target=BLM305>Repository</a>
       </div>
     </li>

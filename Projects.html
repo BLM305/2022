@@ -12,8 +12,8 @@
 </head>
 <body>
   <h2>BLM 305 -- 2022 </h2>
-  <p>Links to the weekly work for each student</p>
-  <ul id=out></ul>
+  <div>Links to the weekly work for each student</div>
+  <ol id=out></ol>
   
 <script>
   "use strict";
@@ -32,12 +32,12 @@
   RECEP TAHA	AYDIN	https://receptahaydin.github.io/RecepFSMVU/
   ABDULMELİK	BEKMEZ	https://abdulmelikbekmez.github.io/BLM_305/
   HATİCE	ÇAĞLAR	https://haticecaglar.github.io/advancedProgrammingTec/
-  MERVE	ÇELİK	https://mervecelik11.github.io/xxx/
-  EMİN YASİR	CORUT	https://eminyasircorut.github.io/eyasircorut.github.io/xxx/
+  MERVE	ÇELİK	https://mervecelik11.github.io/mervecelik-advancedprogramming/
+  EMİN YASİR	CORUT	https://eminyasircorut.github.io/EminYasir/
   DEMET	DEMİR	https://demetdemir0.github.io/BLM305/
   ALİ	DEREYURT	https://dereyurtali.github.io/BLM305-2022/
   TALHA M	DEREYURT	https://talhadereyurt.github.io/AdvancedProgrammingTechniques/
-  EBRAR	DERİNDAĞ	https://ebrarderindag.github.io/xxx/
+  EBRAR	DERİNDAĞ	https://ebrarderindag.github.io/ebrarderindag
   MUSTAFA	DEVECİ	https://mustafa-deveci.github.io/AdvancedProgramming-Studies/
   SÜMEYYE ZÜLAL	DİK	https://szulaldik.github.io/Advance_programming/
   YUSUF	DUR	https://yusufdur.github.io/advanced-programming-2022/
@@ -61,7 +61,7 @@
   MEHMET	ÖZKAN	https://mehmetozkn.github.io/advanced-course/
   ASİYE İLAYDA	SAĞKOL	https://ilaydasagkol.github.io/APT/
   BEYZA	ŞAHİNGÖZ	https://beyzasahingoz.github.io/beyza-sahingoz-advance/
-  FURKAN S	SALİHOĞLU		https://xxx
+  FURKAN S	SALİHOĞLU		https://furkanselimsalihoglu.github.io/Advanced-Programming-Techniques/
   İSMAİL SAİD	SARI	https://isaidsari.github.io/advancedpt/
   YUSUF İHSAN	ŞİMŞEK	https://yusufihsansimsek.github.io/class_repo_advanced/
   YUNUS	SÜMER	https://yunussmr.github.io/BlmAdvancedPrgrmng/
@@ -73,10 +73,12 @@
   function toItem(x) {
       let [n1, n2, p] = x.split('\t')
       if (!n1) return x
-      return "<a href='"+p+"' target=Project>"+n1+' '+n2+"</a>"
+      return "<a href='"+p+"' target=Project>"+n1+" "+n2+"</a>"
   }
   let a = data.split('\n').map(toItem)
   out.innerHTML = '<li>'+a.join('\n<li>')
+  document.body.querySelectorAll('#out li')
+    .forEach(x => x.className='button')
 </script>
 
 <!-- <p>
@@ -89,40 +91,9 @@
 </p> -->
 <p>
 (C) 2022  
-  <a class="button" href="http://mf.fatihsultan.edu.tr/" target=Project>FSM Vakıf Üniversitesi</a>
+  <a class=button href="https://bm.fsm.edu.tr/" target=Project>FSM Vakıf Üniversitesi</a>
 </p>
 
-<script>
-"use strict";
-var eltShown = null
-function doTouch1(evt) {
-    if (eltShown) {
-       eltShown.style.display = ""
-       eltShown = null
-    }
-    let t = evt.target, n = t.tagName
-    console.log("StartTouch", n)
-    if (n == "A" && t.childElementCount > 0) {
-        eltShown = t.children[0]
-        eltShown.style.display = "inherit"
-    } else if (n == "IMG" || n == "SPAN") {
-        //evt.preventDefault()
-        t.parentElement.click()
-    }
-}
-function doTouch2(evt) {
-    let t = evt.target, n = t.tagName
-    //console.log("End Touch", n)
-    if (n == "A" && t.childElementCount > 0) {
-    //ignore click on <a> tag with children
-        evt.preventDefault()
-    }
-}
-for (let e of document.querySelectorAll('a')) {
-    // e.ontouchstart = doTouch1; e.ontouchend = doTouch2
-}
-</script>
-
-
+<script src="navbar.js"></script>
 
 </body></html>

@@ -6,8 +6,9 @@ body {
 }
 .button {    
     border-radius: 10px; 
-    width: 200px;
-    padding: 8px; 
+    width: 192px;
+    margin: 4px;
+    padding: 4px;
 }
 .button:hover {
     background: navy;
@@ -17,33 +18,38 @@ body {
     color: #cef;
 }
 a {
+    display: inline-block;
+    padding: 4px 8px;
     text-decoration:none;
 }
-a:hover .tip, a:hover img {
-    display: inherit;
-}
-img {
-    background: white;
-    top: -90px;
-}
-.tip {
-    font-size: small;
-    color: navy;
-    background: #cef;
-    top: 22px;
-    left: 55px;
-    text-align: center;
-    padding: 5px 5px;
-    border: 1px solid navy;
-}
-img, .tip {
-    display: none;
-    z-index: 1;
-    width: 120px;
-    position: absolute;
-    box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
-}
 p {
-    margin: 2em 0;
+    margin: 1em 0;
 }
-
+.hidden {
+    display: none;
+}
+#info {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2;
+    background: gray;
+    margin-top: 4px;
+}
+#ava, #pro, #git {
+    position: absolute;
+}
+#ava {
+    width: 50%;
+}
+#pro, #git {
+    text-align: center;
+    cursor: pointer;
+    width: 40%;
+    right: 4px;
+}
+#pro {
+    top: 12px;
+}
+#git {
+    bottom: 12px;
+}

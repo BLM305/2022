@@ -14,86 +14,91 @@
   <h2>BLM 305 -- 2022 </h2>
   <div>Links to the weekly work for each student</div>
   <ol id=out></ol>
-  
+  <p>
+    (C) 2022  <a class=button href="https://bm.fsm.edu.tr/" target=Project>FSM Vakıf Üniversitesi</a>
+  </p>
+  <div id=info hidden>
+    <img id=ava src="./images/icon192.png">
+    <a id=pro class=button target=Project>Project</a>
+    <a id=git class=button target=Project>GitHub</a>
+  </div>
 <script>
-  "use strict";
-  const data = 
-  `ÖMER KEREM	ADALI	https://okadalifsm.github.io/okadali-advprog/
-  AHMAD K	AHMEDOĞLU	https://ahmadkaramahmedoglu1.github.io/ileri-program/
-  MEHMET	AK	https://mehmetak7.github.io/advancedProgramming/
-  RÜYA	ALABED	https://rouaalabed.github.io/AdvancedProgramming/
-  NUR EFŞAN	ALBAŞ	https://efsanalbas.github.io/advancedProgramming/
-  ROUA	ALKADAMANI	https://ralkadamani.github.io/Roua-Alkadamani-BLM/
-  BERAT	ALKIN	https://beratalkin.github.io/Advanced_Programming/
-  ERAY	ALTAŞ	https://erayaltas.github.io/BLM19305E/
-  YUNUS EMRE	ANAÇAL	https://yunusemreanacal.github.io/AdvancedProgrammingTechniques/
-  HÜDAYİ	AŞIK	https://hudayiasik.github.io/AdvancePrograming2023/
-  MERYEM	AYDIN	https://meryemayd.github.io/AdvancedProgramming/
-  RECEP TAHA	AYDIN	https://receptahaydin.github.io/RecepFSMVU/
-  ABDULMELİK	BEKMEZ	https://abdulmelikbekmez.github.io/BLM_305/
-  HATİCE	ÇAĞLAR	https://haticecaglar.github.io/advancedProgrammingTec/
-  MERVE	ÇELİK	https://mervecelik11.github.io/mervecelik-advancedprogramming/
-  EMİN YASİR	CORUT	https://eminyasircorut.github.io/EminYasir/
-  DEMET	DEMİR	https://demetdemir0.github.io/BLM305/
-  ALİ	DEREYURT	https://dereyurtali.github.io/BLM305-2022/
-  TALHA M	DEREYURT	https://talhadereyurt.github.io/AdvancedProgrammingTechniques/
-  EBRAR	DERİNDAĞ	https://ebrarderindag.github.io/ebrarderindag
-  MUSTAFA	DEVECİ	https://mustafa-deveci.github.io/AdvancedProgramming-Studies/
-  SÜMEYYE ZÜLAL	DİK	https://szulaldik.github.io/Advance_programming/
-  YUSUF	DUR	https://yusufdur.github.io/advanced-programming-2022/
-  İREM	ERÇEL	https://iremercel.github.io/AdvancedProgrammingTechniqes/
-  BEYZANUR	ERDAĞI	https://beyzanurerdagi.github.io/advanced-programming/
-  FURKAN B	ERGÖÇEN	https://furkanergocen.github.io/Advance-Programming-Languages/
-  ADNAN	FAHED	https://adnanjpg.github.io/advanced-prog-2022/
-  M ALİ	GÜLCEMAL	https://muhammedaligulcemal.github.io/APT/
-  HABİBE	GÜREL	https://habibegurel.github.io/advancedProgrammingTechniques/
-  ALİ	HÜSEYİN	https://alihuseyin1998.github.io/AdvProgTech/
-  RECEP TAYYİP	İLHAN	https://receptayyipilhan.github.io/JavaScript-APIs/
-  SALİHA NUR	İLHAN	https://salihailhan.github.io/JavaScript-APIs/
-  MELİH	KAÇAMAN	https://melihkacaman.github.io/melih_advanced_programming_lab/
-  GONCAGÜL	KARADAĞ	https://goncagulkaradag.github.io/GoncagulKaradag.AdvancedProgramming/
-  RANA S	KAZAN	https://ranasevdenur.github.io/Advanced-Programming-2023/
-  EVREN	KESKİN	https://keskinevren.github.io/advanced-programming/
-  BASHAR	KHOUJAH	https://bashar0101.github.io/bashar_khoujah_APT/
-  NUMAN	KILINÇOĞLU	https://numan-kilincoglu.github.io/Advanced-Programming/
-  ERDİNÇ	KUVVET	https://erdinckuvvet.github.io/advanced-programming-2022/
-  ŞAMİL B	ÖZAYDIN	https://samilozaydin.github.io/Advanced-Programming/
-  MEHMET	ÖZKAN	https://mehmetozkn.github.io/advanced-course/
-  ASİYE İLAYDA	SAĞKOL	https://ilaydasagkol.github.io/APT/
-  BEYZA	ŞAHİNGÖZ	https://beyzasahingoz.github.io/beyza-sahingoz-advance/
-  FURKAN S	SALİHOĞLU		https://furkanselimsalihoglu.github.io/Advanced-Programming-Techniques/
-  İSMAİL SAİD	SARI	https://isaidsari.github.io/advancedpt/
-  YUSUF İHSAN	ŞİMŞEK	https://yusufihsansimsek.github.io/class_repo_advanced/
-  YUNUS	SÜMER	https://yunussmr.github.io/BlmAdvancedPrgrmng/
-  BAHADIR S	TERZİOĞLU	https://bahadirsina.github.io/AdvancedProgramming/
-  FURKAN	ÜLENGİN	https://ulengin.github.io/BLM305_Advance_Programing_FurkanUlengin/
-  İRFAN	VURAL	https://irfan-vural.github.io/AdvanceProgramming/
-  GÜRKAN	YAKAR	https://gurkanyakar.github.io/Advanced-Programming-Techniques/`
+"use strict";
+const input = 
+`ÖMER KEREM ADALI	okadalifsm	okadali-advprog	
+AHMAD K AHMEDOĞLU	ahmadkaramahmedoglu1	ileri-program	
+MEHMET AK	mehmetak7	advancedProgramming	
+RÜYA ALABED	rouaalabed	AdvancedProgramming	
+NUR EFŞAN ALBAŞ	efsanalbas	advancedProgramming	
+ROUA ALKADAMANI	ralkadamani	Roua-Alkadamani-BLM	
+BERAT ALKIN	beratalkin	Advanced_Programming	
+ERAY ALTAŞ	erayaltas	BLM19305E	
+YUNUS EMRE ANAÇAL	yunusemreanacal	AdvancedProgrammingTechniques	
+HÜDAYİ AŞIK	hudayiasik	AdvancePrograming2023	
+MERYEM AYDIN	meryemayd	AdvancedProgramming	
+RECEP TAHA AYDIN	receptahaydin	RecepFSMVU	
+ABDULMELİK BEKMEZ	abdulmelikbekmez	BLM_305	
+HATİCE ÇAĞLAR	haticecaglar	advancedProgrammingTec	
+MERVE ÇELİK	mervecelik11	mervecelik-advancedprogramming	
+EMİN YASİR CORUT	eminyasircorut	EminYasir	
+DEMET DEMİR	demetdemir0	BLM305	
+ALİ DEREYURT	dereyurtali	BLM305-2022	
+TALHA M DEREYURT	talhadereyurt	AdvancedProgrammingTechniques	
+EBRAR DERİNDAĞ	ebrarderindag	ebrarderindag
+MUSTAFA DEVECİ	mustafa-deveci	AdvancedProgramming-Studies	
+SÜMEYYE ZÜLAL DİK	szulaldik	Advance_programming	
+YUSUF DUR	yusufdur	advanced-programming-2022	
+İREM ERÇEL	iremercel	AdvancedProgrammingTechniqes	
+BEYZANUR ERDAĞI	beyzanurerdagi	advanced-programming	
+FURKAN B ERGÖÇEN	furkanergocen	Advance-Programming-Languages	
+ADNAN FAHED	adnanjpg	advanced-prog-2022	
+M ALİ GÜLCEMAL	muhammedaligulcemal	APT	
+HABİBE GÜREL	habibegurel	advancedProgrammingTechniques	
+ALİ HÜSEYİN	alihuseyin1998	AdvProgTech	
+RECEP TAYYİP İLHAN	receptayyipilhan	JavaScript-APIs	
+SALİHA NUR İLHAN	salihailhan	JavaScript-APIs	
+MELİH KAÇAMAN	melihkacaman	melih_advanced_programming_lab	
+GONCAGÜL KARADAĞ	goncagulkaradag	GoncagulKaradag.AdvancedProgramming	
+RANA S KAZAN	ranasevdenur	Advanced-Programming-2023	
+EVREN KESKİN	keskinevren	advanced-programming	
+BASHAR KHOUJAH	bashar0101	bashar_khoujah_APT	
+NUMAN KILINÇOĞLU	numan-kilincoglu	Advanced-Programming	
+ERDİNÇ KUVVET	erdinckuvvet	advanced-programming-2022	
+ŞAMİL B ÖZAYDIN	samilozaydin	Advanced-Programming	
+MEHMET ÖZKAN	mehmetozkn	advanced-course	
+ASİYE İLAYDA SAĞKOL	ilaydasagkol	APT	
+BEYZA ŞAHİNGÖZ	beyzasahingoz	beyza-sahingoz-advance	
+FURKAN S SALİHOĞLU	furkanselimsalihoglu	Advanced-Programming-Techniques	
+İSMAİL SAİD SARI	isaidsari	advancedpt	
+YUSUF İHSAN ŞİMŞEK	yusufihsansimsek	class_repo_advanced	
+YUNUS SÜMER	yunussmr	BlmAdvancedPrgrmng	
+BAHADIR S TERZİOĞLU	bahadirsina	AdvancedProgramming	
+FURKAN ÜLENGİN	ulengin	BLM305_Advance_Programing_FurkanUlengin	
+İRFAN VURAL	irfan-vural	AdvanceProgramming	
+GÜRKAN YAKAR	gurkanyakar	Advanced-Programming-Techniques	`
   
-  function toItem(x) {
-      let [n1, n2, p] = x.split('\t')
-      if (!n1) return x
-      return "<a href='"+p+"' target=Project>"+n1+" "+n2+"</a>"
+  function toItem(line) {
+      let [name, user, repo, ava] = line.split('\t')
+      let git = "https://github.com/"+user
+      let pro = "https://"+user+".github.io/"+repo
+      return {name, user, repo, ava, git, pro}
   }
-  let a = data.split('\n').map(toItem)
-  out.innerHTML = '<li>'+a.join('\n<li>')
-  document.body.querySelectorAll('#out li')
-    .forEach(x => x.className='button')
+  function toHTML(x, i) {
+      return `<li id=${i}>${x.name}`
+    //`<li id=${i}><a href='${x.pro}' target=Project>${x.name}</a>`
+  }
+  function setLinks(x) {
+      let d = data[x.id]; info.hidden = false //visible
+      x.append(info); pro.href = d.pro; git.href = d.git
+      // console.log(i, d)
+  }
+  var data = input.split('\n').map(toItem)
+  out.innerHTML = data.map(toHTML).join('\n')
+  for (let x of out.querySelectorAll('li')) {
+      x.onmouseenter = () => setLinks(x)
+      x.className = 'button'
+  }
 </script>
-
-<!-- <p>
-  <a class="button" href="https://github.com/maeyler/305/" target="NewTab">Repository
-  <img src="./BLM 305 Projects_files/GitHub-Mark-120px-plus.png"></a> 
-  <a class="button" href="https://blm305.github.io/2019/index.html">Course
-  <img src="./BLM 305 Projects_files/icon192.png"></a> 
-  <a class="button" href="https://maeyler.github.io/" target="NewTab">Instructor
-  <img src="./BLM 305 Projects_files/14038292"></a>
-</p> -->
-<p>
-(C) 2022  
-  <a class=button href="https://bm.fsm.edu.tr/" target=Project>FSM Vakıf Üniversitesi</a>
-</p>
-
 <script src="navbar.js"></script>
 
 </body></html>

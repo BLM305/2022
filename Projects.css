@@ -6,7 +6,6 @@ body {
 }
 .button {    
     border-radius: 10px; 
-    width: 192px;
     margin: 4px;
     padding: 4px;
 }
@@ -14,26 +13,19 @@ body {
     background: navy;
     color: #cef;
 }
-.button:hover a {
-    color: #cef;
+li {
+    margin: 10px;
 }
 a {
-    display: inline-block;
-    padding: 4px 8px;
     text-decoration:none;
-}
-p {
-    margin: 1em 0;
-}
-.hidden {
-    display: none;
 }
 #info {
     position: relative;
-    width: 100%;
+    width: 192px;
     aspect-ratio: 2;
     background: gray;
     margin-top: 4px;
+    border: 2px solid navy;
 }
 #ava, #pro, #git {
     position: absolute;
@@ -45,7 +37,7 @@ p {
     text-align: center;
     cursor: pointer;
     width: 40%;
-    right: 4px;
+    right: 0;
 }
 #pro {
     top: 12px;

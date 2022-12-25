@@ -84,28 +84,31 @@ GÜRKAN YAKAR	gurkanyakar	Advanced-Programming-Techniques	`
       return {name, user, repo, git, pro}
   }
   function toHTML(x, i) {
-      return `<li id=${i}>${x.name}`
+      return `<li id=${i}><span class=button>${x.name}</span>`
     //`<li id=${i}><a href='${x.pro}' target=Project>${x.name}</a>`
   }
   async function setAvatar(x) {
+    try { //hide the image, show it on load
       ava.hidden = true
       const U = "https://api.github.com/users/"
       let r = await fetch(U+x.user)
-      if (!r.ok) return
+      if (!r.ok) throw "no connection"
       let u = await r.json()
       ava.src = u.avatar_url
-      ava.onload = () => ava.hidden = false
+    } catch (e) {
+      ava.src = "./images/icon192.png"
+    }
   }
   function setLinks(li) {
       let x = data[li.id]
       setAvatar(x); info.hidden = false //make visible
       li.append(info); pro.href = x.pro; git.href = x.git
   }
+  ava.onload = () => ava.hidden = false
   var data = input.split('\n').map(toItem)
   out.innerHTML = data.map(toHTML).join('\n')
   for (let li of out.querySelectorAll('li')) {
       li.onmouseenter = () => setLinks(li)
-      li.className = 'button'
   }
 </script>
 <script src="navbar.js"></script>

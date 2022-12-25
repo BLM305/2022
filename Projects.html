@@ -78,25 +78,34 @@ FURKAN ÜLENGİN	ulengin	BLM305_Advance_Programing_FurkanUlengin
 GÜRKAN YAKAR	gurkanyakar	Advanced-Programming-Techniques	`
   
   function toItem(line) {
-      let [name, user, repo, ava] = line.split('\t')
+      let [name, user, repo] = line.split('\t')
       let git = "https://github.com/"+user
       let pro = "https://"+user+".github.io/"+repo
-      return {name, user, repo, ava, git, pro}
+      return {name, user, repo, git, pro}
   }
   function toHTML(x, i) {
       return `<li id=${i}>${x.name}`
     //`<li id=${i}><a href='${x.pro}' target=Project>${x.name}</a>`
   }
-  function setLinks(x) {
-      let d = data[x.id]; info.hidden = false //visible
-      x.append(info); pro.href = d.pro; git.href = d.git
-      // console.log(i, d)
+  async function setAvatar(x) {
+      ava.hidden = true
+      const U = "https://api.github.com/users/"
+      let r = await fetch(U+x.user)
+      if (!r.ok) return
+      let u = await r.json()
+      ava.src = u.avatar_url
+      ava.onload = () => ava.hidden = false
+  }
+  function setLinks(li) {
+      let x = data[li.id]
+      setAvatar(x); info.hidden = false //make visible
+      li.append(info); pro.href = x.pro; git.href = x.git
   }
   var data = input.split('\n').map(toItem)
   out.innerHTML = data.map(toHTML).join('\n')
-  for (let x of out.querySelectorAll('li')) {
-      x.onmouseenter = () => setLinks(x)
-      x.className = 'button'
+  for (let li of out.querySelectorAll('li')) {
+      li.onmouseenter = () => setLinks(li)
+      li.className = 'button'
   }
 </script>
 <script src="navbar.js"></script>

@@ -1,11 +1,11 @@
-const CACHE ='AP22'
+const CACHE ='2022'
 function installCB(e) {
   console.log(CACHE, e);
 }
 addEventListener('install', installCB)
 
 function save(req, resp) {
-  if (!req.url.includes("github")) 
+  if (!req.url.includes("2022")) 
      return resp;
   return caches.open(CACHE)
   .then(cache => { // save request

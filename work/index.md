@@ -25,6 +25,8 @@ CW#8 -- [Open Maps API](./Open_Maps.html)
 CW#9 -- [Image Inspector](./ImageInspector.html) &
 [Pie Chart](https://maeyler.github.io/JS/canvas/Pie%20Chart.html)
 
+[Drive API](./Drive_API.html) & [Drive teacher]("https://maeyler.github.io/JS/api/Drive_teacher)
+
 <script src="/2022/navbar.js"></script>
 <style>
   body { 
